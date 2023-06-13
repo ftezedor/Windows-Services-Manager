@@ -55,6 +55,24 @@ CSevicesManger is the console version with less functionalities
 
 ![](/Docs/debug_console.png "Service debug mode")
 
+## Operation
+
+Start the Windows Services Manager and drop a DLL into the staging folder.
+The Staging Watcher will then move it to the workers folder and the Manager will load and execute it.
+```
+2023-06-13 00:28:31  I  Services  Logger successfully initialized
+2023-06-13 00:28:31  I  Services  Starting service 'Staging Watcher'
+2023-06-13 00:29:31  I  Services  Found file F:\temp\WSvc\staging\Worker2.dll
+2023-06-13 00:29:31  I  Services  Moving F:\temp\WSvc\staging\Worker2.dll into the services folder
+2023-06-13 00:29:31  I  Services  Loading dll "F:\temp\WSvc\workers\Worker2.dll"
+2023-06-13 00:29:31  I  Services  Worker2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null: Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-06-13 00:29:31  I  Services  Worker2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2023-06-13 00:29:31  I  Services  Starting service 'Worker Tester 2'
+2023-06-13 00:29:31  I  Worker2  starting working
+2023-06-13 00:29:31  I  Worker2  performing some work...
+
+```
+
 ## Execution Log
 ```
 2023-06-12 22:48:50  I  Services  Logger successfully initialized
